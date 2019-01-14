@@ -13,6 +13,8 @@ pipeline {
                 // script{
                 //     docker.build("tomcatwebapp:${env.BUILD_ID}")
                 // }
+                sh 'whoami'
+                sh 'echo $PATH'
                 sh "/Applications/Docker.app/Contents/Resources/bin/docker build . -t tomcatwebapp:${env.BUILD_ID}"
             }
         }
